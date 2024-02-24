@@ -1,0 +1,24 @@
+f1= lambda a,b: a+b
+print(f1(1,2))
+
+#두 숫자의 곱을 반환하는 lambda 작성
+f2 = lambda a,b: a*b
+print(f2(1,2))
+
+#문자열 리스트를 길이에 따라 정렬하는 함수사용
+words = ["Python", "is","awesome", "language"]
+f3 = lambda a : len(a)
+f4 =sorted(words, key=f3) #다시 한번 보기
+print(f4) 
+
+#짝수만 나오게 하는 함수만들기 1~10
+#filter 함수와 함께 사용
+numbers = [1,2,3,4,5,6,7,8,9,10]
+f5 = filter(lambda a: a%2==0, numbers)
+print(list(f5))
+
+#주어진 숫자 리스트의 각 요소를 제곱하는 lambda 
+numbers = [1, 2, 3, 4, 5]
+f6 = map(lambda a: a*a, numbers)
+print(list(f6))
+
