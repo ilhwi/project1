@@ -37,6 +37,10 @@ public class BoardVO {
 	public void setPasswd(String passwd) {
 		this.passwd = passwd;
 	}
+	public BoardVO(String id, String passwd) {
+		this.register = id;
+		this.passwd = passwd;
+	}
 	public BoardVO(String register, String subject, String email, String content, String passwd) {
 		super();
 		this.register = register;
@@ -47,7 +51,7 @@ public class BoardVO {
 	}
 	@Override
 	public String toString() {
-		return "register=" + register + ", subject=" + subject + ", "
-				+ "email=" + email + ", content=" + content;
+		return "아이디는 " + register + ", 글 제목은 " + subject + ", "
+				+ "이메일은 " + email + ", 글내용은 " + content;
 	}
 }
